@@ -1,5 +1,52 @@
 // ===============================================
-// NAVIGATION & SCROLL EFFECTS
+// MODERN LAVITA CONSULTING WEBSITE - JAVASCRIPT
+// ===============================================
+
+// Initialize AOS (Animate On Scroll)
+AOS.init({
+    duration: 800,
+    easing: 'ease-in-out',
+    once: true,
+    offset: 100
+});
+
+// ===============================================
+// CUSTOM CURSOR
+// ===============================================
+
+const cursorDot = document.querySelector('[data-cursor-dot]');
+const cursorOutline = document.querySelector('[data-cursor-outline]');
+
+if (window.innerWidth > 1024) {
+    window.addEventListener('mousemove', (e) => {
+        const posX = e.clientX;
+        const posY = e.clientY;
+        
+        cursorDot.style.left = `${posX}px`;
+        cursorDot.style.top = `${posY}px`;
+        
+        cursorOutline.animate({
+            left: `${posX}px`,
+            top: `${posY}px`
+        }, { duration: 500, fill: 'forwards' });
+    });
+    
+    // Cursor hover effects
+    const hoverElements = document.querySelectorAll('a, button, input, textarea');
+    hoverElements.forEach(el => {
+        el.addEventListener('mouseenter', () => {
+            cursorDot.style.transform = 'translate(-50%, -50%) scale(2)';
+            cursorOutline.style.transform = 'translate(-50%, -50%) scale(1.5)';
+        });
+        el.addEventListener('mouseleave', () => {
+            cursorDot.style.transform = 'translate(-50%, -50%) scale(1)';
+            cursorOutline.style.transform = 'translate(-50%, -50%) scale(1)';
+        });
+    });
+}
+
+// ===============================================
+// NAVIGATION
 // ===============================================
 
 const navbar = document.getElementById('navbar');

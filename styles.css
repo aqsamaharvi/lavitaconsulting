@@ -15,7 +15,7 @@
 }
 html {scroll-behavior: smooth; font-size: 16px;}
 body {font-family: var(--font-primary); color: var(--gray-800); line-height: 1.7; overflow-x: hidden; background: var(--white); -webkit-font-smoothing: antialiased;}
-.container-fluid {max-width: 1400px; margin: 0 auto; padding: 0 2rem;}
+.container-fluid {max-width: 1400px; margin: 0 auto; padding: 0 40px;}
 h1,h2,h3,h4,h5,h6 {font-family: var(--font-heading); font-weight: 700; line-height: 1.2; letter-spacing: -0.02em; color: var(--dark);}
 h1 {font-size: clamp(2.5rem, 6vw, 5rem);} h2 {font-size: clamp(2rem, 5vw, 3.5rem);} h3 {font-size: clamp(1.5rem, 3vw, 2rem);}
 .text-gradient {background: var(--gradient-primary); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;}
@@ -25,7 +25,7 @@ h1 {font-size: clamp(2.5rem, 6vw, 5rem);} h2 {font-size: clamp(2rem, 5vw, 3.5rem
 @media (max-width: 1024px) {.cursor-dot, .cursor-outline {display: none;}}
 .navbar {position: fixed; top: 0; left: 0; right: 0; z-index: 1000; background: rgba(255,255,255,0.8); backdrop-filter: blur(20px); border-bottom: 1px solid var(--gray-200); transition: all var(--transition-base);}
 .navbar.scrolled {background: rgba(255,255,255,0.95); box-shadow: var(--shadow-sm);}
-.nav-wrapper {display: flex; justify-content: space-between; align-items: center; padding: 1.25rem 0;}
+.nav-wrapper {display: flex; justify-content: space-between; align-items: center; padding: 1.5rem 0;}
 .logo {display: flex; align-items: center; gap: 0.75rem; font-weight: 700;}
 .logo-icon {width: 40px; height: 40px;}
 .logo-icon svg {width: 100%; height: 100%; filter: drop-shadow(0 2px 8px rgba(102,126,234,0.3));}
@@ -53,7 +53,7 @@ h1 {font-size: clamp(2.5rem, 6vw, 5rem);} h2 {font-size: clamp(2rem, 5vw, 3.5rem
 .glow-on-hover {position: relative; z-index: 1;}
 .glow-on-hover::before {content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: var(--gradient-primary); border-radius: inherit; opacity: 0; filter: blur(20px); transition: opacity var(--transition-base); z-index: -1;}
 .glow-on-hover:hover::before {opacity: 0.7;}
-.hero {position: relative; min-height: 100vh; display: flex; align-items: center; justify-content: center; padding: 150px 0 100px; overflow: hidden;}
+.hero {position: relative; min-height: 100vh; display: flex; align-items: center; justify-content: center; padding: 180px 0 120px; overflow: hidden;}
 .hero-background {position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%); z-index: -1;}
 .gradient-orb {position: absolute; border-radius: 50%; filter: blur(80px); opacity: 0.6; animation: float 20s infinite ease-in-out;}
 .orb-1 {width: 500px; height: 500px; background: radial-gradient(circle, rgba(102,126,234,0.8) 0%, transparent 70%); top: -10%; left: -10%;}
@@ -82,9 +82,9 @@ h1 {font-size: clamp(2.5rem, 6vw, 5rem);} h2 {font-size: clamp(2rem, 5vw, 3.5rem
 @keyframes pulse {0%, 100% {opacity: 1; transform: scale(1);} 50% {opacity: 0.5; transform: scale(1.2);}}
 .section-header {text-align: center; max-width: 800px; margin: 0 auto 5rem;}
 .section-description {font-size: 1.15rem; color: var(--gray-600); line-height: 1.7;}
-.mission {padding: 120px 0; background: var(--white);}
+.mission {padding: 140px 0; background: var(--white);}
 .mission-grid {display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem;}
-.mission-card {position: relative; padding: 2.5rem; background: var(--white); border: 1px solid var(--gray-200); border-radius: 24px; transition: all var(--transition-base); overflow: hidden;}
+.mission-card {position: relative; padding: 3rem; background: var(--white); border: 1px solid var(--gray-200); border-radius: 24px; transition: all var(--transition-base); overflow: hidden;}
 .mission-card::before {content: ''; position: absolute; top: 0; left: 0; right: 0; height: 4px; background: var(--gradient-primary); transform: scaleX(0); transition: transform var(--transition-base);}
 .mission-card:hover {transform: translateY(-8px); box-shadow: var(--shadow-xl); border-color: transparent;}
 .mission-card:hover::before {transform: scaleX(1);}
@@ -97,7 +97,7 @@ h1 {font-size: clamp(2.5rem, 6vw, 5rem);} h2 {font-size: clamp(2rem, 5vw, 3.5rem
 .mission-card p {color: var(--gray-600); line-height: 1.7; margin: 0;}
 .card-decoration {position: absolute; bottom: -50px; right: -50px; width: 150px; height: 150px; background: var(--gradient-primary); border-radius: 50%; opacity: 0.03; transition: all 0.5s;}
 .mission-card:hover .card-decoration {bottom: -30px; right: -30px; opacity: 0.08;}
-.services {padding: 120px 0; background: var(--gray-50);}
+.services {padding: 140px 0; background: var(--gray-50);}
 .services-grid {display: grid; grid-template-columns: repeat(auto-fit, minmax(380px, 1fr)); gap: 2.5rem;}
 .service-card.modern {background: var(--white); border-radius: 28px; overflow: hidden; box-shadow: var(--shadow-md); transition: all var(--transition-base); position: relative;}
 .service-card.modern:hover {transform: translateY(-10px); box-shadow: var(--shadow-xl);}
@@ -108,7 +108,7 @@ h1 {font-size: clamp(2.5rem, 6vw, 5rem);} h2 {font-size: clamp(2rem, 5vw, 3.5rem
 .service-card.modern:hover .service-image img {transform: scale(1.08);}
 .image-overlay {position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: linear-gradient(to bottom, transparent 0%, rgba(0,0,0,0.7) 100%);}
 .service-number {position: absolute; bottom: 20px; left: 20px; font-size: 4rem; font-weight: 700; color: white; opacity: 0.3; font-family: var(--font-heading); line-height: 1;}
-.service-content {padding: 2.5rem;}
+.service-content {padding: 3rem;}
 .service-icon-modern {width: 60px; height: 60px; display: flex; align-items: center; justify-content: center; background: var(--gradient-primary); color: white; border-radius: 14px; font-size: 1.5rem; margin-bottom: 1.5rem; box-shadow: 0 8px 20px rgba(102,126,234,0.3);}
 .service-title {font-size: 1.65rem; margin-bottom: 0.5rem;}
 .service-subtitle {font-size: 1rem; color: var(--gray-600); margin-bottom: 1.5rem;}
@@ -117,7 +117,7 @@ h1 {font-size: clamp(2.5rem, 6vw, 5rem);} h2 {font-size: clamp(2rem, 5vw, 3.5rem
 .service-features i {color: var(--primary); font-size: 1.1rem;}
 .btn-service.modern {width: 100%; background: var(--gradient-primary); color: white; justify-content: center; box-shadow: 0 4px 15px rgba(102,126,234,0.3);}
 .btn-service.modern:hover {transform: translateY(-2px); box-shadow: 0 8px 25px rgba(102,126,234,0.4);}
-.about {padding: 120px 0; background: var(--white);}
+.about {padding: 140px 0; background: var(--white);}
 .about-wrapper {display: grid; grid-template-columns: 1fr 1.2fr; gap: 5rem; align-items: center;}
 .image-frame {position: relative; border-radius: 28px; overflow: hidden; box-shadow: var(--shadow-xl);}
 .image-frame img {width: 100%; height: auto; display: block;}
@@ -138,7 +138,7 @@ h1 {font-size: clamp(2.5rem, 6vw, 5rem);} h2 {font-size: clamp(2rem, 5vw, 3.5rem
 .about-contact-quick {display: flex; gap: 0.75rem;}
 .quick-contact-btn {width: 48px; height: 48px; display: flex; align-items: center; justify-content: center; background: var(--gray-100); border-radius: 12px; color: var(--gray-700); transition: all var(--transition-base);}
 .quick-contact-btn:hover {background: var(--gradient-primary); color: white; transform: translateY(-3px); box-shadow: var(--shadow-md);}
-.contact {padding: 120px 0; background: var(--gray-50);}
+.contact {padding: 140px 0; background: var(--gray-50);}
 .contact-content {display: grid; grid-template-columns: 1fr 1.5fr; gap: 3rem;}
 .contact-info {display: flex; flex-direction: column; gap: 1.5rem;}
 .contact-card {background: var(--white); padding: 1.75rem; border-radius: 20px; box-shadow: var(--shadow-sm); transition: all var(--transition-base); border: 1px solid var(--gray-200);}
@@ -146,7 +146,7 @@ h1 {font-size: clamp(2.5rem, 6vw, 5rem);} h2 {font-size: clamp(2rem, 5vw, 3.5rem
 .contact-icon {width: 50px; height: 50px; display: flex; align-items: center; justify-content: center; background: var(--gradient-primary); color: white; border-radius: 12px; font-size: 1.3rem; margin-bottom: 1rem;}
 .contact-card h3 {font-size: 1.15rem; margin-bottom: 0.5rem;}
 .contact-card a {color: var(--primary); font-weight: 500;}
-.contact-form-wrapper {background: var(--white); padding: 3rem; border-radius: 28px; box-shadow: var(--shadow-lg);}
+.contact-form-wrapper {background: var(--white); padding: 3.5rem; border-radius: 28px; box-shadow: var(--shadow-lg);}
 .form-group {margin-bottom: 1.5rem;}
 .form-group label {display: block; margin-bottom: 0.5rem; font-weight: 600; color: var(--dark);}
 .form-group input, .form-group textarea {width: 100%; padding: 1rem 1.25rem; border: 2px solid var(--gray-200); border-radius: 12px; font-family: var(--font-primary); font-size: 1rem; transition: all 0.15s; background: var(--white);}
@@ -157,7 +157,7 @@ h1 {font-size: clamp(2.5rem, 6vw, 5rem);} h2 {font-size: clamp(2rem, 5vw, 3.5rem
 .form-notice {margin-top: 1rem; font-size: 0.85rem; color: var(--gray-500); text-align: center;}
 .form-notice a {color: var(--primary); text-decoration: underline;}
 .btn-block {width: 100%; justify-content: center;}
-.newsletter {padding: 5rem 0; background: var(--gradient-primary); position: relative; overflow: hidden;}
+.newsletter {padding: 6rem 0; background: var(--gradient-primary); position: relative; overflow: hidden;}
 .newsletter-content {display: flex; justify-content: space-between; align-items: center; gap: 3rem; position: relative; z-index: 1;}
 .newsletter-text h2 {color: white; margin-bottom: 0.5rem;}
 .newsletter-text p {color: rgba(255,255,255,0.9); font-size: 1.1rem;}
@@ -166,7 +166,7 @@ h1 {font-size: clamp(2.5rem, 6vw, 5rem);} h2 {font-size: clamp(2rem, 5vw, 3.5rem
 .newsletter-form input::placeholder {color: rgba(255,255,255,0.6);}
 .newsletter-form input:focus {outline: none; border-color: white; background: rgba(255,255,255,0.15);}
 .newsletter-form button {background: white; color: var(--primary);}
-.footer {background: var(--dark); color: var(--gray-300); padding: 5rem 0 2rem;}
+.footer {background: var(--dark); color: var(--gray-300); padding: 6rem 0 2.5rem;}
 .footer-content {display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 3rem; margin-bottom: 3rem;}
 .footer-section h3, .footer-section h4 {color: white; margin-bottom: 1rem;}
 .footer-tagline {color: var(--accent); font-size: 0.9rem; margin-bottom: 1rem;}
@@ -203,7 +203,7 @@ h1 {font-size: clamp(2.5rem, 6vw, 5rem);} h2 {font-size: clamp(2rem, 5vw, 3.5rem
     .social-links {justify-content: center;}
 }
 @media (max-width: 640px) {
-    .container-fluid {padding: 0 1.25rem;}
+    .container-fluid {padding: 0 40px;}
     .hero-cta {flex-direction: column; width: 100%;}
     .hero-cta .btn-large {width: 100%;}
     .about-actions {flex-direction: column; width: 100%;}
